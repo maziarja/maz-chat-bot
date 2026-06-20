@@ -10,8 +10,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
-  console.log(message);
-  return <div>from server {message}</div>;
+  return <div className="text-2xl font-bold">from server {message}</div>;
 }
 
 export default App;
