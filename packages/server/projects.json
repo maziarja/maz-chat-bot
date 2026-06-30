@@ -1,0 +1,478 @@
+[
+  {
+    "name": "cv",
+    "stacks": [
+      "html",
+      "css"
+    ],
+    "createdAt": "2023-02-11",
+    "repoLink": "https://github.com/maziarja/cv",
+    "liveDemoLink": null
+  },
+  {
+    "name": "website",
+    "stacks": [
+      "html",
+      "css"
+    ],
+    "createdAt": "2023-02-19",
+    "repoLink": "https://github.com/maziarja/website",
+    "liveDemoLink": null
+  },
+  {
+    "name": "Clipboard-landing-page",
+    "stacks": [
+      "html",
+      "css"
+    ],
+    "createdAt": "2024-01-30",
+    "repoLink": "https://github.com/maziarja/Clipboard-landing-page",
+    "liveDemoLink": null
+  },
+  {
+    "name": "chat-app-css-illustration-master",
+    "stacks": [
+      "html",
+      "css"
+    ],
+    "createdAt": "2024-02-08",
+    "repoLink": "https://github.com/maziarja/chat-app-css-illustration-master",
+    "liveDemoLink": null
+  },
+  {
+    "name": "interactive-rating-component-main",
+    "stacks": [
+      "html",
+      "css"
+    ],
+    "createdAt": "2024-02-11",
+    "repoLink": "https://github.com/maziarja/interactive-rating-component-main",
+    "liveDemoLink": null
+  },
+  {
+    "name": "pricing-component-with-toggle-master",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-02-14",
+    "repoLink": "https://github.com/maziarja/pricing-component-with-toggle-master",
+    "liveDemoLink": null
+  },
+  {
+    "name": "age-calculator-app-main",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-02-25",
+    "repoLink": "https://github.com/maziarja/age-calculator-app-main",
+    "liveDemoLink": null
+  },
+  {
+    "name": "age-calculatorV2",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-07-04",
+    "repoLink": "https://github.com/maziarja/age-calculatorV2",
+    "liveDemoLink": null
+  },
+  {
+    "name": "countdown-timer",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-07-21",
+    "repoLink": "https://github.com/maziarja/countdown-timer",
+    "liveDemoLink": null
+  },
+  {
+    "name": "todo-app",
+    "stacks": [
+      "react",
+      "javascript",
+      "css"
+    ],
+    "createdAt": "2024-08-02",
+    "repoLink": "https://github.com/maziarja/todo-app",
+    "liveDemoLink": null
+  },
+  {
+    "name": "ip-tracker",
+    "stacks": [
+      "react",
+      "javascript",
+      "leaflet"
+    ],
+    "createdAt": "2024-08-10",
+    "repoLink": "https://github.com/maziarja/ip-tracker",
+    "liveDemoLink": null
+  },
+  {
+    "name": "multi-step-form",
+    "stacks": [
+      "react",
+      "javascript",
+      "css"
+    ],
+    "createdAt": "2024-08-25",
+    "repoLink": "https://github.com/maziarja/multi-step-form",
+    "liveDemoLink": null
+  },
+  {
+    "name": "ecommerce",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-09-08",
+    "repoLink": "https://github.com/maziarja/ecommerce",
+    "liveDemoLink": null
+  },
+  {
+    "name": "interactive-comments",
+    "stacks": [
+      "html",
+      "css",
+      "javascript"
+    ],
+    "createdAt": "2024-09-23",
+    "repoLink": "https://github.com/maziarja/interactive-comments",
+    "liveDemoLink": null
+  },
+  {
+    "name": "calculator",
+    "stacks": [
+      "react",
+      "javascript",
+      "vite"
+    ],
+    "createdAt": "2025-02-21",
+    "repoLink": "https://github.com/maziarja/calculator",
+    "liveDemoLink": "https://calculator-beta-seven-59.vercel.app"
+  },
+  {
+    "name": "entertainment-app",
+    "stacks": [
+      "react",
+      "javascript",
+      "supabase"
+    ],
+    "createdAt": "2025-03-22",
+    "repoLink": "https://github.com/maziarja/entertainment-app",
+    "liveDemoLink": "https://entertainment-app-jade.vercel.app"
+  },
+  {
+    "name": "note-taking",
+    "stacks": [
+      "nextjs",
+      "javascript",
+      "supabase",
+      "tailwind"
+    ],
+    "createdAt": "2025-04-16",
+    "repoLink": "https://github.com/maziarja/note-taking",
+    "liveDemoLink": "https://note-taking-blush.vercel.app"
+  },
+  {
+    "name": "link-sharing",
+    "stacks": [
+      "react",
+      "javascript",
+      "firebase"
+    ],
+    "createdAt": "2025-06-28",
+    "repoLink": "https://github.com/maziarja/link-sharing",
+    "liveDemoLink": "https://link-sharing-ivory.vercel.app"
+  },
+  {
+    "name": "markdown",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn"
+    ],
+    "createdAt": "2025-07-15",
+    "repoLink": "https://github.com/maziarja/markdown",
+    "liveDemoLink": "https://markdown-eight-theta.vercel.app"
+  },
+  {
+    "name": "mood-tracking",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql"
+    ],
+    "createdAt": "2025-07-29",
+    "repoLink": "https://github.com/maziarja/mood-tracking",
+    "liveDemoLink": "https://mood-tracking-eight.vercel.app"
+  },
+  {
+    "name": "kanban-task-management",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "zustand"
+    ],
+    "createdAt": "2025-08-18",
+    "repoLink": "https://github.com/maziarja/kanban-task-management",
+    "liveDemoLink": "https://kanban-task-management-sigma-umber.vercel.app"
+  },
+  {
+    "name": "personal-finance-app",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "mongodb",
+      "mongoose"
+    ],
+    "createdAt": "2025-09-15",
+    "repoLink": "https://github.com/maziarja/personal-finance-app",
+    "liveDemoLink": "https://personal-finance-app-virid.vercel.app"
+  },
+  {
+    "name": "Maziar-portfolio",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn"
+    ],
+    "createdAt": "2025-10-09",
+    "repoLink": "https://github.com/maziarja/Maziar-portfolio",
+    "liveDemoLink": "https://maziar-portfolio.vercel.app"
+  },
+  {
+    "name": "feedback-product",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql"
+    ],
+    "createdAt": "2025-10-20",
+    "repoLink": "https://github.com/maziarja/feedback-product",
+    "liveDemoLink": "https://feedback-product-dusky.vercel.app"
+  },
+  {
+    "name": "bookmark-manager",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql"
+    ],
+    "createdAt": "2025-10-29",
+    "repoLink": "https://github.com/maziarja/bookmark-manager",
+    "liveDemoLink": "https://bookmark-manager-rosy.vercel.app"
+  },
+  {
+    "name": "hangman-game",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind"
+    ],
+    "createdAt": "2025-11-17",
+    "repoLink": "https://github.com/maziarja/hangman-game",
+    "liveDemoLink": "https://hangman-game-two-chi.vercel.app"
+  },
+  {
+    "name": "audiophile-e-commerce",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql"
+    ],
+    "createdAt": "2025-12-06",
+    "repoLink": "https://github.com/maziarja/audiophile-e-commerce",
+    "liveDemoLink": "https://audiophile-e-commerce-psi.vercel.app"
+  },
+  {
+    "name": "flashcard-app",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn"
+    ],
+    "createdAt": "2025-12-27",
+    "repoLink": "https://github.com/maziarja/flashcard-app",
+    "liveDemoLink": "https://flashcard-app-eosin-omega.vercel.app"
+  },
+  {
+    "name": "healthyRecipeFinder",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "openai"
+    ],
+    "createdAt": "2026-01-17",
+    "repoLink": "https://github.com/maziarja/healthyRecipeFinder",
+    "liveDemoLink": "https://healthy-recipe-finder-five.vercel.app"
+  },
+  {
+    "name": "github-user-search",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind"
+    ],
+    "createdAt": "2026-02-02",
+    "repoLink": "https://github.com/maziarja/github-user-search",
+    "liveDemoLink": "https://github-user-search-bice.vercel.app"
+  },
+  {
+    "name": "devjobs",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn"
+    ],
+    "createdAt": "2026-02-09",
+    "repoLink": "https://github.com/maziarja/devjobs",
+    "liveDemoLink": null
+  },
+  {
+    "name": "dictionary-web-app",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind"
+    ],
+    "createdAt": "2026-02-20",
+    "repoLink": "https://github.com/maziarja/dictionary-web-app",
+    "liveDemoLink": "https://dictionary-web-app-weld.vercel.app"
+  },
+  {
+    "name": "personal-blog",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "strapi"
+    ],
+    "createdAt": "2026-03-12",
+    "repoLink": "https://github.com/maziarja/personal-blog",
+    "liveDemoLink": "https://personal-blog-two-khaki.vercel.app"
+  },
+  {
+    "name": "personal-blog-strapi",
+    "stacks": [
+      "strapi",
+      "javascript"
+    ],
+    "createdAt": "2026-03-12",
+    "repoLink": "https://github.com/maziarja/personal-blog-strapi",
+    "liveDemoLink": null
+  },
+  {
+    "name": "note-taking-web-app-v2",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql",
+      "betterAuth"
+    ],
+    "createdAt": "2026-04-12",
+    "repoLink": "https://github.com/maziarja/note-taking-web-app-v2",
+    "liveDemoLink": "https://note-taking-web-app-v2-amber.vercel.app"
+  },
+  {
+    "name": "prisma-neon-next",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "prisma",
+      "postgresql",
+      "neon"
+    ],
+    "createdAt": "2026-04-29",
+    "repoLink": "https://github.com/maziarja/prisma-neon-next",
+    "liveDemoLink": "https://prisma-neon-next.vercel.app"
+  },
+  {
+    "name": "frontpage",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn"
+    ],
+    "createdAt": "2026-05-12",
+    "repoLink": "https://github.com/maziarja/frontpage",
+    "liveDemoLink": "https://frontpage-kohl.vercel.app"
+  },
+  {
+    "name": "my-personal-finance",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql",
+      "betterAuth",
+      "zustand",
+      "tanStackQuery",
+      "zod",
+      "recharts"
+    ],
+    "createdAt": "2026-05-25",
+    "repoLink": "https://github.com/maziarja/my-personal-finance",
+    "liveDemoLink": "https://my-personal-finance-ten.vercel.app"
+  },
+  {
+    "name": "7-skills-workflow",
+    "stacks": [
+      "claude-code",
+      "markdown"
+    ],
+    "createdAt": "2026-05-28",
+    "repoLink": "https://github.com/maziarja/7-skills-workflow",
+    "liveDemoLink": null
+  },
+  {
+    "name": "Ipass",
+    "stacks": [
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "prisma",
+      "postgresql",
+      "betterAuth"
+    ],
+    "createdAt": "2026-06-19",
+    "repoLink": "https://github.com/maziarja/Ipass",
+    "liveDemoLink": "https://ipass-gray.vercel.app"
+  }
+]
