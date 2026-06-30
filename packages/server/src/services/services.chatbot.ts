@@ -3,7 +3,6 @@ import ollama from "ollama";
 import { readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import type { Response as ExpressResponse } from "express";
 import conversationRepository, {
    ollamaConversationRepository,
 } from "../repositories/conversationRepositories";
@@ -33,36 +32,6 @@ export const chatbotServices = {
       conversationRepository.setLastResponseId(conversationId, response.id);
 
       return response.output_text;
-   },
-
-   openAIStream: async (
-      prompt: string,
-      conversationId: string,
-      res: ExpressResponse
-   ) => {
-      const stream = await client.responses.create({
-         model: "gpt-5-nano",
-         input: prompt,
-         instructions: instruction,
-         previous_response_id:
-            conversationRepository.getLastResponseId(conversationId),
-         stream: true,
-      });
-
-      for await (const event of stream) {
-         if (event.type === "response.output_text.delta") {
-            res.write(`data: ${JSON.stringify({ delta: event.delta })}\n\n`);
-         }
-         if (event.type === "response.completed") {
-            conversationRepository.setLastResponseId(
-               conversationId,
-               event.response.id
-            );
-         }
-      }
-
-      res.write("data: [DONE]\n\n");
-      res.end();
    },
 
    ollama: async (prompt: string, conversationId: string) => {

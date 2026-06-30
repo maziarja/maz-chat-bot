@@ -13,19 +13,11 @@ const chatbotController = async (req: Request, res: Response) => {
 
    const { prompt, conversationId } = parsed.data;
 
-   res.setHeader("Content-Type", "text/event-stream");
-   res.setHeader("Cache-Control", "no-cache");
-   res.setHeader("Connection", "keep-alive");
-   res.flushHeaders();
+   const output = await chatbotServices.openAI(prompt, conversationId);
 
-   try {
-      await chatbotServices.openAIStream(prompt, conversationId, res);
-   } catch (err) {
-      const message =
-         err instanceof Error ? err.message : "Failed to generate a response";
-      res.write(`data: ${JSON.stringify({ error: message })}\n\n`);
-      res.end();
-   }
+   // const output = await chatbotServices.ollama(prompt, conversationId);
+
+   res.json({ message: output });
 };
 
 export default chatbotController;
