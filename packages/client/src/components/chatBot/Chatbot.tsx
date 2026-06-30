@@ -1,4 +1,3 @@
-import axios from "axios";
 import { type FieldValues } from "react-hook-form";
 import { useRef, useState, useEffect } from "react";
 import Messages, { type Messages as MessagesType } from "./Messages";
@@ -6,8 +5,6 @@ import LoadingIndicator from "./LoadingIndicator";
 import ChatInput from "./ChatInput";
 import { Bot, Moon, Sun, SquarePen } from "lucide-react";
 import { Button } from "../ui/button";
-
-type Response = { message: string };
 
 const EXAMPLE_PROMPTS = [
    "What are your best projects?",
@@ -22,6 +19,7 @@ function Chatbot({ dark, onToggleDark }: Props) {
    const [messages, setMessages] = useState<MessagesType>([]);
    const [error, setError] = useState("");
    const [loading, setLoading] = useState(false);
+   const [isStreaming, setIsStreaming] = useState(false);
 
    useEffect(() => {
       if (!error) return;
@@ -32,30 +30,82 @@ function Chatbot({ dark, onToggleDark }: Props) {
    function resetChat() {
       setMessages([]);
       setError("");
+      setLoading(false);
+      setIsStreaming(false);
       conversationIdRef.current = crypto.randomUUID();
    }
 
    async function onSubmit({ prompt }: FieldValues) {
       setError("");
-      try {
-         setMessages((prev) => [...prev, { prompt, role: "user" }]);
-         setLoading(true);
+      setLoading(true);
+      setIsStreaming(true);
+      setMessages((prev) => [
+         ...prev,
+         { id: crypto.randomUUID(), prompt, role: "user" },
+      ]);
 
-         const { data } = await axios.post<Response>("/api/chat", {
-            prompt,
-            conversationId: conversationIdRef.current,
+      try {
+         const res = await fetch("/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+               prompt,
+               conversationId: conversationIdRef.current,
+            }),
          });
 
+         if (!res.ok) {
+            const data = await res.json();
+            throw new Error(data.message ?? "Something went wrong");
+         }
+
+         const botId = crypto.randomUUID();
          setMessages((prev) => [
             ...prev,
-            { prompt: data.message, role: "bot" },
+            { id: botId, prompt: "", role: "bot" },
          ]);
-      } catch (err) {
-         if (axios.isAxiosError(err)) {
-            setError(err.response?.data?.message ?? "Something went wrong");
-         }
-      } finally {
          setLoading(false);
+
+         const reader = res.body!.getReader();
+         const decoder = new TextDecoder();
+         let buffer = "";
+
+         while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split("\n");
+            buffer = lines.pop() ?? "";
+            for (const line of lines) {
+               if (!line.startsWith("data: ")) continue;
+               const payload = line.slice(6);
+               if (payload === "[DONE]") break;
+               try {
+                  const parsed = JSON.parse(payload);
+                  if (parsed.error) throw new Error(parsed.error);
+                  if (parsed.delta) {
+                     setMessages((prev) =>
+                        prev.map((m) =>
+                           m.id === botId
+                              ? { ...m, prompt: m.prompt + parsed.delta }
+                              : m
+                        )
+                     );
+                  }
+               } catch (parseErr) {
+                  if (parseErr instanceof Error && parseErr.message !== "Unexpected token") {
+                     throw parseErr;
+                  }
+               }
+            }
+         }
+      } catch (err) {
+         setError(
+            err instanceof Error ? err.message : "Something went wrong"
+         );
+         setLoading(false);
+      } finally {
+         setIsStreaming(false);
       }
    }
 
@@ -112,7 +162,7 @@ function Chatbot({ dark, onToggleDark }: Props) {
             </div>
          )}
 
-         <ChatInput onSubmit={onSubmit} loading={loading} />
+         <ChatInput onSubmit={onSubmit} loading={loading || isStreaming} />
       </div>
    );
 }

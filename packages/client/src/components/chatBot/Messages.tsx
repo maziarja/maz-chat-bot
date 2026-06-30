@@ -5,6 +5,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { Bot } from "lucide-react";
 
 export type Messages = {
+   id: string;
    prompt: string;
    role: "user" | "bot";
 }[];
@@ -26,10 +27,10 @@ function Messages({ messages }: { messages: Messages }) {
 
    return (
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto">
-         {messages.map((msg, index) =>
+         {messages.map((msg) =>
             msg.role === "user" ? (
                <div
-                  key={index}
+                  key={msg.id}
                   className="flex animate-message-in justify-end"
                >
                   <div className="max-w-[80%] rounded-2xl rounded-br-sm bg-blue-600 px-4 py-2.5 text-sm text-white">
@@ -38,7 +39,7 @@ function Messages({ messages }: { messages: Messages }) {
                </div>
             ) : (
                <div
-                  key={index}
+                  key={msg.id}
                   className="flex animate-message-in items-start gap-2.5"
                   onCopy={handleCopy}
                >
