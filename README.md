@@ -1,15 +1,28 @@
-# playground
+# maz-chatbot
 
-To install dependencies:
+A personal AI chatbot that lets you chat with OpenAI (GPT) or a local Ollama model, with per-session memory and Markdown-rendered responses.
 
-```bash
-bun install
-```
+## Features
 
-To run:
+- Switch between **OpenAI GPT** and a local **Ollama** model (Gemma 3)
+- Per-session conversation history
+- Markdown-rendered responses
+- Clean, modern chat UI built with shadcn/ui
 
-```bash
-bun run index.ts
-```
+## Tech Stack
 
-This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+### Frontend
+
+- React 19, TypeScript
+- Vite, Tailwind CSS v4, shadcn/ui (Radix UI)
+- react-markdown, Axios
+
+### Backend
+
+- Bun runtime, Express 5
+- OpenAI SDK, Ollama SDK
+- Zod for request validation
+
+### Monorepo
+
+Two packages — `packages/client` and `packages/server` — orchestrated from the root with `concurrently`.
