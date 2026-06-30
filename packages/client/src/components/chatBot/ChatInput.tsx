@@ -59,7 +59,7 @@ function ChatInput({ onSubmit, loading }: Props) {
             ref={mergeRef}
             autoFocus
             onKeyDown={handleKeyDown}
-            className="w-full resize-none bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+            className="w-full resize-none bg-transparent text-base outline-none placeholder:text-muted-foreground sm:text-sm"
             style={{ minHeight: "24px", maxHeight: "160px" }}
             maxLength={MAX_LENGTH}
             placeholder="Ask anything… (Enter to send, Shift+Enter for new line)"
