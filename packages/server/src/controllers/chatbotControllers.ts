@@ -13,10 +13,9 @@ const chatbotController = async (req: Request, res: Response) => {
 
    const { prompt, conversationId } = parsed.data;
 
-   //  const output = await chatbotServices.openAI(prompt,
-   // conversationId);
+   const output = await chatbotServices.openAI(prompt, conversationId);
 
-   const output = await chatbotServices.ollama(prompt, conversationId);
+   // const output = await chatbotServices.ollama(prompt, conversationId);
 
    res.json({ message: output });
 };
